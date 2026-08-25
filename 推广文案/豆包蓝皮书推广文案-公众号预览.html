@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我准备连载一份《豆包蓝皮书》- 桂皮AI实战</title>
+  <style>
+    body {
+      max-width: 580px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    .copy-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 16px 0;
+      background: #D97A3E;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      text-align: center;
+    }
+    .copy-btn:hover {
+      background: #c56a2e;
+    }
+    #article-content {
+      background: #fff;
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+  <button class="copy-btn" onclick="copyFullHTML()">📋 复制正文（可直接粘贴到公众号后台）</button>
+
+  <div id="article-content">
+    <p style="font-size:22px;font-weight:700;color:#1C1714;text-align:center;margin:0 0 8px 0;line-height:1.4;">我准备连载一份《豆包蓝皮书》</p>
+    <p style="font-size:15px;color:#1C1714;text-align:center;margin:0 0 30px 0;line-height:1.6;">关于豆包自动化工作流的可靠性实践</p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 12px 0;"><strong style="font-size:17px;color:#D97A3E;">为什么需要这份蓝皮书呢？</strong></p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 12px 0;">现在关于豆包的自动化工作流，网上能搜到的内容大多是零散技巧：一条 Prompt 模板、一个工作流截图、一段操作视频。</p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 12px 0;">但很少有人系统回答这些问题：</p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 8px 0;padding-left:16px;">• 工作流跑着跑着就失败了，不知道哪里出问题</p>
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 8px 0;padding-left:16px;">• Prompt 写的时候效果好，过段时间就变差了</p>
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 8px 0;padding-left:16px;">• 自动化任务越来越多，维护成本越来越高</p>
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 12px 0;padding-left:16px;">• Token/API 费用越用越多，怎么控制预算</p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 16px 0;">这些问题没有标准答案，但每个用豆包做自动化的人迟早都会遇到。</p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 16px 0;"><strong style="font-size:17px;color:#D97A3E;">我们要做什么？</strong></p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 12px 0;">所以我想写一份《豆包蓝皮书》。</p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 12px 0;">它不是教你"怎么操作豆包"，而是帮你<strong style="color:#D97A3E;">从入门到专家，系统掌握自动化工作流的可靠性方法论</strong>。</p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 12px 0;">它提供一套递进式体系：</p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 8px 0;padding-left:16px;">• <strong>新手</strong>：30 分钟内跑通第一个不会轻易挂掉的定时任务</p>
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 8px 0;padding-left:16px;">• <strong>进阶用户</strong>：工作流出错自动恢复、内容质量自动检查、运行状态一目了然、节约 token 成本等</p>
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 16px 0;padding-left:16px;">• <strong>专家级用户</strong>：多任务配合、效果持续优化、Prompt 自动迭代、小型业务系统搭建</p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 16px 0;"><strong style="font-size:17px;color:#D97A3E;">具体怎么做？</strong></p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 12px 0;">蓝皮书采用三篇进阶结构：</p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 8px 0;padding-left:16px;">📘 <strong>入门篇</strong>：学会搭建第一个稳定运行的自动化任务，遇到错误知道怎么处理</p>
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 8px 0;padding-left:16px;">📗 <strong>进阶篇</strong>：学会设计可靠的工作流，让任务在出错时能自动恢复，不会白跑</p>
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 8px 0;padding-left:16px;">📕 <strong>专家篇</strong>：学会让多个任务配合工作，自动检查质量，持续优化效果</p>
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 8px 0;padding-left:16px;">📙 <strong>案例研究</strong>：用真实场景讲解，比如自动采集数据并写入表格、自动生成内容并发布、定时巡检并告警</p>
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 12px 0;padding-left:16px;">📓 <strong>附录</strong>：常见问题解答、工具对比、上线前检查清单</p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 16px 0;">每一章都遵循相同结构：<strong style="color:#D97A3E;">理论要点 → 实战案例 → 操作模板 → 常见错误</strong>。</p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 16px 0;"><strong style="font-size:17px;color:#D97A3E;">发布计划</strong></p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 8px 0;padding-left:16px;">• <strong>平台</strong>：公众号「桂皮AI实战」首发</p>
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 16px 0;padding-left:16px;">• <strong>完整版</strong>：连载结束后整理成完整 PDF，送给所有公众号粉丝</p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 16px 0;"><strong style="font-size:17px;color:#D97A3E;">如何获取</strong></p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:0 0 16px 0;">关注公众号 <strong style="color:#D97A3E;">「桂皮AI实战」</strong>，后台回复 <strong style="color:#D97A3E;">「豆包蓝皮书」</strong> 获取完整目录。</p>
+
+    <p style="font-size:16px;color:#1C1714;line-height:1.9;margin:24px 0 0 0;text-align:center;">——</p>
+    <p style="font-size:15px;color:#1C1714;line-height:1.8;margin:8px 0 0 0;text-align:center;">首发于 2026-08-25，每周更新。</p>
+  </div>
+
+  <button class="copy-btn" onclick="copyFullHTML()" style="margin-top:20px;">📋 再次复制正文</button>
+
+  <script>
+    function copyFullHTML() {
+      const articleContent = document.getElementById('article-content');
+      if (!articleContent) return;
+
+      const clone = articleContent.cloneNode(true);
+      clone.querySelectorAll('.copy-btn').forEach(b => b.remove());
+
+      const html = clone.innerHTML;
+      const text = clone.innerText;
+
+      if (navigator.clipboard && navigator.clipboard.write) {
+        const htmlBlob = new Blob([html], { type: 'text/html' });
+        const textBlob = new Blob([text], { type: 'text/plain' });
+        navigator.clipboard.write([
+          new ClipboardItem({ 'text/html': htmlBlob, 'text/plain': textBlob })
+        ]).then(() => {
+          alert('✅ 已复制正文，可直接粘贴到公众号后台');
+        }).catch(() => {
+          navigator.clipboard.writeText(html).then(() => {
+            alert('✅ 已复制HTML格式，请在公众号后台用 Ctrl+V 粘贴');
+          });
+        });
+      } else {
+        navigator.clipboard.writeText(html).then(() => {
+          alert('✅ 已复制，请直接粘贴到公众号后台');
+        });
+      }
+    }
+  </script>
+</body>
+</html>
